@@ -4,7 +4,10 @@
   var submitButton = document.getElementById('submit');
   var time = 90
   function timer() {
-    console.log ("working")
+    console.log (time)
+    time =time-1
+    document.getElementById("totalTime").innerHTML="time: "+ time;
+
   }
  setInterval(timer,1000)
     
