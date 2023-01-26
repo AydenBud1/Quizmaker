@@ -7,12 +7,31 @@
     <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <p id = "question">This is where questions go</p>
-        <button id="answerA" onclick="correctAnswer()">test1</button>
-        <button id="answerB" onclick ="wrongAnswer()">test2 </button>
-        <button id="answerC" onclick ="wrongAnswer()"> test3</button>
-        <button id="answerD" onclick ="wrongAnswer()">test4</button>
-        <br>
+        <div id="question1">
+        <p id = "question">what happened on november 11th at 11am 1918</p>
+        <button id="answerA" onclick="correctAnswer1()">the end the of ww1</button>
+        <button id="answerB" onclick ="wrongAnswer1()">the end of ww2 </button>
+        <button id="answerC" onclick ="wrongAnswer1()"> minecraft released</button>
+        <button id="answerD" onclick ="wrongAnswer1()"> maverick ate a sandwhich</button>
+        </div>
+        <div id="question2">
+            <p id = "question">what is the chemical formula for polytetraflouroethelyene</p>
+        <button id="answerA" onclick="wrongAnswer2()">H2O</button>
+        <button id="answerB" onclick ="wrongAnswer2()"> C18H24N2O6   </button>
+        <button id="answerC" onclick ="correctAnswer2()"> (C2F4)n</button>
+        <button id="answerD" onclick ="wrongAnswer2()"> Au(CR4)</button>
+        </div>
+        <div id="question3">
+            <p id = "question">How many atoms are in the human body</p>
+        <button id="answerA" onclick="wrongAnswer3()">6,500,000,000,000,000,000,000,000,000</button>
+        <button id="answerB" onclick ="wrongAnswer3()">  10^82   </button>
+        <button id="answerC" onclick ="correctAnswer3()"> 1.3 x 10^50</button>
+        <button id="answerD" onclick ="wrongAnswer3()"> around 90 million</button>
+        </div>
+        <p>input your intials</p>
+        <input id="name"><br>
+        <button id = "submit" onclick="submitButton()"> submit results</button>
+
         <p id="totalTime">90</p>
        
     </body>

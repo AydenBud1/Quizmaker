@@ -2,8 +2,8 @@
   var quizContainer = document.getElementById('quiz');
   var resultsContainer = document.getElementById('results');
   var submitButton = document.getElementById('submit');
-  var time = 90
-  var question = 5
+  var time = 30
+
   
 
   setInterval(timer,1000)
@@ -11,36 +11,53 @@
     console.log (time)
     time =time-1
     document.getElementById("totalTime").innerHTML="time: "+ time;
-    if (time <=0){
+    if (time <= 0){
       endTest()
     }
 
   }
  
     
-
- function correctAnswer(){
-  console.log("working")
-  nextQuestion()
+//question 1
+ function correctAnswer1(){
+  document.getElementById("question1").style.display = "none";
  }
 
- function wrongAnswer(){
-  nextQuestion()
-  time= time-25;
+ function wrongAnswer1(){
+
+  document.getElementById("question1").style.display = "none";
+  time= time-5;
  }
- function nextQuestion(){
-  question = question -1
-  if(question= 4){
-    document.getElementById("question").innerHTML="what is 7-2"
-    document.getElementById("answerA").innerHTML= "5"
-    document.getElementById("answerB").innerHTML= "8"
-    document.getElementById("answerC").innerHTML="amgous"
-    document.getElementById("answerD").innerHTML="3"
-  }
+ //question 2
+ function correctAnswer2(){
+  document.getElementById("question2").style.display = "none";
   
-
-
+  
  }
-function endTest(){
 
-}
+ function wrongAnswer2(){
+  time= time-5;
+  document.getElementById("question2").style.display = "none";
+  
+ }
+ //question 3
+ function correctAnswer3(){
+  document.getElementById("question3").style.display = "none";
+  submitButton()
+ 
+  
+ }
+
+ function wrongAnswer3(){
+ 
+  document.getElementById("question3").style.display = "none";
+  time= time-5;
+ }
+
+ 
+ function submitButton(){
+  localStorage.setItem("score", time)
+  localStorage.setItem(document.getElementById("name"), submitName)
+ }
+ 
+ 
