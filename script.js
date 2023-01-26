@@ -1,8 +1,8 @@
 
   var quizContainer = document.getElementById('quiz');
   var resultsContainer = document.getElementById('results');
-  var submitButton = document.getElementById('submit');
   var time = 30
+  submitName= null
 
   
 
@@ -53,11 +53,11 @@
   document.getElementById("question3").style.display = "none";
   time= time-5;
  }
-
- 
  function submitButton(){
   localStorage.setItem("score", time)
   localStorage.setItem(document.getElementById("name"), submitName)
+  window.location.href = 'results.html';
+  return false;
  }
- 
+
  
